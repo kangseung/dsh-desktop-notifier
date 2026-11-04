@@ -1,5 +1,27 @@
 # dsh-desktop-notifier
 
+> **中文说明**
+>
+> 每轮 AI 回复结束时，在系统桌面弹出通知并播放提示音——网页缩到后台、被别的窗口盖住、或者你正低头刷手机，都能被提醒到。Harness 自带的浏览器通知需要页面开着并授予浏览器权限，这个插件不需要：它跑在 Host 侧，直接调用系统桌面能力。
+>
+> | 平台 | 通知 | 提示音 |
+> | --- | --- | --- |
+> | Linux | `notify-send`（KDE / GNOME） | `paplay`，没有则回退 `pw-play` |
+> | macOS | `osascript display notification` | 系统自带 `Glass` 声 |
+>
+> - 触发点是 `agent/turn-stopping`，一轮真正结束才提醒，不是每个中间步骤
+> - **只提醒根会话**，subagent / teammate 静默，跑 Agent Team 不会刷屏
+> - 正文取会话标题（没有标题用工作目录名），12 秒过期，同一会话替换上一条不堆叠
+> - 零运行时依赖、无 install 脚本，只用 `spawn` 调系统命令，不联网
+>
+> 安装：
+>
+> ```sh
+> dsh plugin --profile web add https://github.com/kangseung/dsh-desktop-notifier/archive/refs/tags/v1.0.1.tar.gz
+> ```
+>
+> 完整中文文档（调整提示音、已知限制、开发说明）见 **[README.zh.md](README.zh.md)**。
+
 Desktop notification plus a chime whenever a [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) session finishes a turn — so you notice the reply even when the browser tab is minimised, hidden behind another window, or you are away from the screen looking at your phone.
 
 ![Plugin icon](icon.svg)
