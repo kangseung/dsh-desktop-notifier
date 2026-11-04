@@ -1,0 +1,4 @@
+# dsh-desktop-notifier bundle patch: mount the host plugin under its package name.
+- insert:
+    - id: dsh-desktop-notifier
+      name: '@local/dsh-desktop-notifier'

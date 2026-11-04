@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Desktop reply notifier",
+    "description": "Pops a desktop notification and plays a chime whenever a session finishes replying, even when the browser tab is hidden."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "dsh-desktop-notifier",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "DeepSeek Harness desktop notification (with chime) when a turn finishes, so you notice even when the browser tab is hidden",
+  "license": "MIT",
+  "author": "kangseung",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "notification",
+    "notify-send",
+    "osascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kangseung/dsh-desktop-notifier.git"
+  },
+  "homepage": "https://github.com/kangseung/dsh-desktop-notifier",
+  "bugs": {
+    "url": "https://github.com/kangseung/dsh-desktop-notifier/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "dsh.plugin.json",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" }
+  }
+}
