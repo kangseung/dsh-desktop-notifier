@@ -1,6 +1,6 @@
 {
   "name": "dsh-desktop-notifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "type": "module",
   "description": "DeepSeek Harness desktop notification (with chime) when a turn finishes, so you notice even when the browser tab is hidden",

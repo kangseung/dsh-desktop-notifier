@@ -30,7 +30,7 @@ It listens on the `agent/turn-stopping` event, so it fires once at the end of a 
 ## Install
 
 ```sh
-dsh plugin --profile web add https://github.com/kangseung/dsh-desktop-notifier/archive/refs/tags/v1.0.0.tar.gz
+dsh plugin --profile web add https://github.com/kangseung/dsh-desktop-notifier/archive/refs/tags/v1.0.1.tar.gz
 ```
 
 Restart the Harness (`dsh --profile web ...`) so the Host half loads, then check that the row `dsh-desktop-notifier` shows up as active in **Settings → Plugins**.

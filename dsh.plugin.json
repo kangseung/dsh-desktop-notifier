@@ -1,7 +1,7 @@
 {
   "name": "dsh-desktop-notifier",
   "description": "Desktop notification with a chime when a DeepSeek Harness session finishes a turn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "entry": {
     "name": "dsh-desktop-notifier",
     "inject": ["agents", "sessions", "sessionTitle"]

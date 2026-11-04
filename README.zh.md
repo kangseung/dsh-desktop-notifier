@@ -30,7 +30,7 @@ Harness 自带的浏览器通知插件需要页面处于打开状态并且授予
 ## 安装
 
 ```sh
-dsh plugin --profile web add https://github.com/kangseung/dsh-desktop-notifier/archive/refs/tags/v1.0.0.tar.gz
+dsh plugin --profile web add https://github.com/kangseung/dsh-desktop-notifier/archive/refs/tags/v1.0.1.tar.gz
 ```
 
 重启 Harness（`dsh --profile web ...`）让 Host 半部分加载，然后到 **设置 → 插件** 里确认 `dsh-desktop-notifier` 这一行是激活状态。
